@@ -53,7 +53,7 @@ pipeline {
                     withCredentials([aws(credentialsId: 'aws-credentials', region: AWS_DEFAULT_REGION), 
                                       sshUserPrivateKey(credentialsId: 'ssh-private-key', keyFileVariable: 'SSH_KEY')]) {
                         sh """
-                        ssh-keyscan -H 13.233.81.235 >> ~/.ssh/known_hosts
+                        ssh-keyscan -H 13.233.207.245 >> ~/.ssh/known_hosts
                         ssh -i \$SSH_KEY ubuntu@${EC2_HOST} "aws configure set aws_access_key_id ${AWS_ACCESS_KEY_ID}"
                         ssh -i \$SSH_KEY ubuntu@${EC2_HOST} "aws configure set aws_secret_access_key ${AWS_SECRET_ACCESS_KEY}"
                         ssh -i \$SSH_KEY ubuntu@${EC2_HOST} "aws configure set region ${AWS_DEFAULT_REGION}"

@@ -5,7 +5,7 @@ pipeline {
         ECR_REPOSITORY = '026090533449.dkr.ecr.ap-south-1.amazonaws.com/php-app'
         IMAGE_TAG = "${env.BUILD_ID}"  // Jenkins build ID as image tag
         AWS_DEFAULT_REGION = 'ap-south-1'
-        EC2_HOST = '13.233.81.235'
+        EC2_HOST = '13.233.207.245'
     }
 
     stages {
